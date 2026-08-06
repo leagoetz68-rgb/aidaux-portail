@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AID'AUX — Portail des applications</title>
+<style>
+  :root {
+    --teal: #00BBB4;
+    --teal-dark: #000F9F;
+    --orange: #FF4713;
+    --bg: #f4f7f7;
+    --card: #ffffff;
+    --text: #223;
+    --muted: #6b7a7a;
+    --border: #dfe7e6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .topbar {
+    width: 100%;
+    background: #ffffff;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid var(--orange);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .topbar img { height: 56px; display: block; }
+  .hero {
+    text-align: center;
+    margin: 40px 20px 8px;
+  }
+  .hero h1 {
+    color: var(--teal-dark);
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: 0;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 36px 20px 60px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px 28px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .icon-suivi { background: var(--teal); }
+  .icon-recrutement { background: var(--teal-dark); }
+  .icon-prospects { background: var(--orange); }
+  .card h2 {
+    font-size: 1.15rem;
+    color: var(--teal-dark);
+    margin: 0 0 8px;
+  }
+  .card p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin: 0 0 22px;
+    line-height: 1.4;
+    min-height: 40px;
+  }
+  .card a {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .card a:hover { background: #d93a0f; }
+  footer {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <img src="logo.png" alt="AID'AUX">
+  </div>
+
+  <div class="hero">
+    <h1>Portail des applications AID'AUX</h1>
+    <p>Choisissez l'application dont vous avez besoin</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon icon-suivi">📊</div>
+      <h2>Aid'Aux Suivi</h2>
+      <p>Suivi des interventions, anomalies et taux de facturation</p>
+      <a href="https://aidaux-suivi.onrender.com" target="_blank" rel="noopener">Ouvrir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon icon-recrutement">📝</div>
+      <h2>Aid'Aux Recrutement</h2>
+      <p>Dossiers de candidature, tests et documents d'embauche</p>
+      <a href="https://aidaux-recrutement-.onrender.com" target="_blank" rel="noopener">Ouvrir</a>
+    </div>
+
+    <div class="card">
+      <div class="card-icon icon-prospects">🤝</div>
+      <h2>Aid'Aux Prospects</h2>
+      <p>Gestion des dossiers d'évaluation des bénéficiaires potentiels</p>
+      <a href="https://aidaux-prospect.onrender.com" target="_blank" rel="noopener">Ouvrir</a>
+    </div>
+  </div>
+
+  <footer>AID'AUX — Services d'aide à la personne</footer>
+</body>
+</html>
