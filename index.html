@@ -57,12 +57,17 @@
     margin: 0;
   }
   .cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
     gap: 24px;
     justify-content: center;
-    max-width: 1000px;
     margin: 36px 20px 60px;
+  }
+  @media (max-width: 640px) {
+    .cards {
+      grid-template-columns: 1fr;
+      max-width: 320px;
+    }
   }
   .card {
     background: var(--card);
